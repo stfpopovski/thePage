@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>The Page | Home</title>
+</head>
+<body>
+    
+    <div class="content">
+        <header>
+            <img class="logo" src="imgs/logo.png">
+            <nav class="nav">
+                <a href="index.html" class="nav-link active">home</a>
+                <div class="dropdown">
+                    <a onclick="dropDownFunction()" class="nav-link">bikes</a>
+                    <div id = "dropdownMenu" class="dropdown-content">
+                        <a href="hardtail.html">hardtail</a>
+                        <a href="trail.html">trail</a>
+                        <a href="enduro.html">enduro</a>
+                        <a href="downhill.html">downhill</a>
+                        <a href="ebike.html">e-bike</a>
+                    </div>
+                </div>
+                <a href="about-us.html" class="nav-link">our story</a>
+                <a href="contact.html" class="nav-link">contact</a>
+            </nav>
+        </header>
+
+        <div class="banner">
+            <h1>Lorem ipsum dolor sit amet</h1>
+        </div>
+
+        <main class="section1">
+            <img src="imgs/bike1.jpg" class="bike1">
+            <p class="text1">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Mattis vulputate enim nulla aliquet porttitor. Nam libero justo laoreet sit amet cursus. Aliquam eleifend mi in nulla posuere sollicitudin aliquam ultrices sagittis. Faucibus vitae aliquet nec ullamcorper. Neque viverra justo nec ultrices dui. Hendrerit dolor magna eget est lorem ipsum dolor sit amet. Mauris sit amet massa vitae tortor condimentum lacinia. Pharetra diam sit amet nisl suscipit adipiscing. Turpis egestas sed tempus urna et pharetra. Et tortor at risus viverra adipiscing at in tellus. Mauris vitae ultricies leo integer malesuada nunc vel risus commodo.</p>
+        </main>
+
+        <div class="separator"></div>
+
+        <main class="section2">  
+            <img src="imgs/bike2.jpg" class="bike2">
+            <p class="text2">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Mattis vulputate enim nulla aliquet porttitor. Nam libero justo laoreet sit amet cursus. Aliquam eleifend mi in nulla posuere sollicitudin aliquam ultrices sagittis. Faucibus vitae aliquet nec ullamcorper. Neque viverra justo nec ultrices dui. Hendrerit dolor magna eget est lorem ipsum dolor sit amet. Mauris sit amet massa vitae tortor condimentum lacinia. Pharetra diam sit amet nisl suscipit adipiscing. Turpis egestas sed tempus urna et pharetra. Et tortor at risus viverra adipiscing at in tellus. Mauris vitae ultricies leo integer malesuada nunc vel risus commodo.</p>
+        </main>
+
+        <footer class="footer">
+            <div class="copyright">
+                <p>Creation of SP ® 2023</p>
+            </div>
+        </footer>
+    </div>
+
+<script>
+    function dropDownFunction() {
+    document.getElementById("dropdownMenu").classList.toggle("show");
+    }
+
+    window.onclick = function(event) {
+    if (!event.target.matches('.nav-link')) {
+        var dropdowns = document.getElementsByClassName("dropdown-content");
+        var i;
+            for (i = 0; i < dropdowns.length; i++) {
+                var openDropdown = dropdowns[i];
+                if (openDropdown.classList.contains('show')) {
+                openDropdown.classList.remove('show');
+                }
+            }
+        }
+    }
+</script>
+
+</body>
+</html>

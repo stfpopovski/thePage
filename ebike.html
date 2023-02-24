@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>The Page | E-Bike</title>
+</head>
+<body>
+    
+    <div class="main-grid">
+        <header>
+            <img class="logo" src="imgs/logo.png">
+            <nav class="nav">
+                <a href="index.html" class="nav-link">home</a>
+                <div class="dropdown">
+                    <a onclick="dropDownFunction()" class="nav-link active">bikes</a>
+                    <div id="dropdownMenu" class="dropdown-content">
+                        <a href="hardtail.html">hardtail</a>
+                        <a href="trail.html">trail</a>
+                        <a href="enduro.html">enduro</a>
+                        <a href="downhill.html">downhill</a>
+                        <a href="ebike.html">e-bike</a>
+                    </div>
+                </div>
+                <a href="about-us.html" class="nav-link">our story</a>
+                <a href="contact.html" class="nav-link">contact</a>
+            </nav>
+        </header>
+
+<script>
+    function dropDownFunction() {
+    document.getElementById("dropdownMenu").classList.toggle("show");
+    }
+
+    window.onclick = function(event) {
+    if (!event.target.matches('.nav-link')) {
+        var dropdowns = document.getElementsByClassName("dropdown-content");
+        var i;
+            for (i = 0; i < dropdowns.length; i++) {
+                var openDropdown = dropdowns[i];
+                if (openDropdown.classList.contains('show')) {
+                openDropdown.classList.remove('show');
+                }
+            }
+        }
+    }
+</script>
+        
+</body>
+</html>

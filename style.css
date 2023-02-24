@@ -1,0 +1,222 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+:root {
+    --clr-text: #fff;
+    --clr-bg: #0000009d;
+    --clr-accent: rgb(114, 38, 38);
+    --clr-accent2: grey;
+    --clr-fade: rgb(87, 87, 87);
+    --clr-gradient-transparent:  linear-gradient(180deg, rgba(11, 11, 11, 0.712) 0%, rgba(22,22,22,0.712) 19%, rgba(18,18,18,0.712) 48%, rgba(69, 69, 69, 0.712) 100%);
+}
+
+body {
+    background: url(imgs/bg.jpg);
+    background-size: contain;
+    background-color: var(--clr-bg);
+    background-blend-mode: multiply;
+    margin: 0;
+    color: var(--clr-text);
+    line-height: 1.5;
+    font-family: sans-serif;
+}
+
+h1 {
+  animation: fadeIn 1s;
+}
+
+.banner {
+    background: url(imgs/banner.jpg);
+    background-color: var(--clr-fade);
+    background-blend-mode: multiply;
+    color: var(--clr-text);
+    text-align: center;
+    text-transform: capitalize;
+    font-size: clamp(1rem, 2vw, 7rem);
+    background-size: contain;
+    background-attachment: fixed;
+    margin: 0;
+    padding: 2em;
+    border-bottom: solid 2px var(--clr-accent2);
+}
+
+header {
+    font-size: 0.9rem;
+    display: flex;
+    position: static;
+    background: var(--clr-bg);
+    border-bottom: solid 2px var(--clr-accent2);
+}
+
+.nav {
+    display: flex;
+    flex-grow: 1;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.nav-link {
+    color: var(--clr-text);
+    opacity: 0.5;
+    text-transform: uppercase;
+    text-decoration: none;
+    align-items: center;
+}
+
+  a:hover, a:focus {
+    cursor: pointer;
+    opacity: 1;
+    transition: 550ms;
+  }
+
+  .active, .link:hover {
+    color: var(--clr-text);
+    opacity: 0.8;
+  }
+  
+  .dropdown-content {
+    padding: 3em 0;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: none;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.897);
+    z-index: 7;
+  }
+  
+  .dropdown-content a {
+    float: none;
+    color: var(--clr-text);
+    padding: 1rem 1rem;
+    text-decoration: none;
+    text-transform: capitalize;
+    display: block;
+    text-align: left;
+    animation: fadeIn 2s;
+  }
+  
+  .dropdown-content a:hover, a:focus {
+    background-color: #646464d8;
+    animation: fadeIn 500ms;
+  }
+  
+  .dropdown-content {
+    animation: dropDown 250ms ease-in-out backwards;
+    transform-origin: top center;
+  }
+
+  .show {
+    display: block;
+  }
+
+main {
+    margin: 2rem;
+    text-align: justify;
+}
+
+.separator {
+    background: url(imgs/separator.webp);
+    background-color: var(--clr-fade);
+    background-blend-mode: multiply;
+    color: var(--clr-text);
+    text-transform: capitalize;
+    font-size: clamp(0.5rem, 7vw, 7rem);
+    margin: 0;
+    background-size: contain;
+    background-attachment: fixed;
+    padding: 4rem;
+    border-bottom: solid 2px var(--clr-accent2);
+    border-top: solid 2px var(--clr-accent2);
+}
+
+footer {
+    background-color: rgba(15, 15, 15, 0.815);
+    display: flex;
+    padding: 1rem 0 1rem 1rem;
+    border-top: solid 2px var(--clr-accent2);
+    justify-content: center;
+}
+
+.section1 img, .section2 img {
+    width: 100%;
+    height: 400px;
+}
+
+@keyframes dropDown {
+    0% {
+        transform: scaleY(0)
+    }
+    100% {
+        transform: scaleY(1)
+    }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@media screen and (min-width: 50em) {
+
+header {
+  font-size: 1em;
+  position: sticky;
+  top: 0;
+}
+
+.nav {
+  margin: 0 37em 0 35em;
+}
+
+.dropdown-content {
+  padding: initial;
+  width: 35%;
+  position: absolute;
+  top: 3.5em;
+  bottom: initial;
+  left: 40em;
+  right: initial;
+}
+
+.banner {
+  padding: 9em;
+  background-size: cover;
+}
+
+.section1 img, .section2 img {
+  width: 50%;
+  height: 40em;
+}
+
+.section1, .section2 {
+  margin: 2em 15em 2em 15em;
+}
+
+main {
+  display: flex;
+  align-items: center;
+}
+
+.section2 {
+  flex-direction: row-reverse;
+}
+
+p {
+  padding: 5em;
+}
+
+.separator {
+  padding: 1.5em;
+  background-size: cover;
+}
+
+}
