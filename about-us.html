@@ -6,17 +6,43 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <title>The Page | Our Story</title>
+    <script>
+        window.onscroll = function() {
+          scrollFunction()
+        };
+        
+        function scrollFunction() {
+          let logo = document.getElementById("logo")
+          let header = document.getElementById("header")
+          let dropDown = document.getElementById("dropdownMenu")
+
+          if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
+            logo.style.width = '4em';
+            logo.style.marginLeft = '1em';
+            header.style.background = '#000';
+            dropDown.style.top = '2.6em';
+
+          } else {
+            logo.style.width = '6em';
+            logo.style.marginLeft = '-1em';
+            header.style.background = '#0000009d';
+            dropDown.style.top = '4em';
+          }
+          
+        }
+        </script>
 </head>
 <body>
     
     <div class="main-grid">
-        <header>
-            <img class="logo" src="imgs/logo.png">
-            <nav class="nav">
+        <header id="header">
+        <a href="index.html"><img id="logo" class="logo" src="imgs/logo.png"></a>
+            <nav id="navbar" class="navbar">
                 <a href="index.html" class="nav-link">home</a>
                 <div class="dropdown">
                     <a onclick="dropDownFunction()" class="nav-link">bikes</a>
-                    <div id="dropdownMenu" class="dropdown-content">
+                    <div id = "dropdownMenu" class="dropdown-content">
+                        <img class="logo" src="imgs/logo.png">
                         <a href="hardtail.html">hardtail</a>
                         <a href="trail.html">trail</a>
                         <a href="enduro.html">enduro</a>
@@ -28,7 +54,7 @@
                 <a href="contact.html" class="nav-link">contact</a>
             </nav>
         </header>
-
+        
 <script>
     function dropDownFunction() {
     document.getElementById("dropdownMenu").classList.toggle("show");

@@ -6,31 +6,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <title>The Page | Enduro</title>
+    <script>
+      window.onscroll = function() {
+        scrollFunction()
+      };
+      
+      function scrollFunction() {
+        let logo = document.getElementById("logo")
+        let header = document.getElementById("header")
+        let dropDown = document.getElementById("dropdownMenu")
+
+        if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
+          logo.style.width = '4em';
+          logo.style.marginLeft = '1em';
+          header.style.background = '#000';
+          dropDown.style.top = '2.6em';
+
+        } else {
+          logo.style.width = '6em';
+          logo.style.marginLeft = '-1em';
+          header.style.background = '#0000009d';
+          dropDown.style.top = '4em';
+        }
+        
+      }
+      </script>
 </head>
 <body>
-    
-    <div class="main-grid">
-        <header>
-            <img class="logo" src="imgs/logo.png">
-            <nav class="nav">
-                <a href="index.html" class="nav-link">home</a>
-                <div class="dropdown">
-                    <a onclick="dropDownFunction()" class="nav-link active">bikes</a>
-                    <div id="dropdownMenu" class="dropdown-content">
-                        <a href="hardtail.html">hardtail</a>
-                        <a href="trail.html">trail</a>
-                        <a href="enduro.html">enduro</a>
-                        <a href="downhill.html">downhill</a>
-                        <a href="ebike.html">e-bike</a>
-                    </div>
-                </div>
-                <a href="about-us.html" class="nav-link">our story</a>
-                <a href="contact.html" class="nav-link">contact</a>
-            </nav>
-        </header>
 
 <script>
-    function dropDownFunction() {
+  function dropDownFunction() {
     document.getElementById("dropdownMenu").classList.toggle("show");
     }
 
@@ -47,6 +52,105 @@
         }
     }
 </script>
-        
+
+    <div id ="main-grid" class="main-grid">
+      <header id="header">
+        <a href="index.html"><img id="logo" class="logo" src="imgs/logo.png"></a>
+            <nav class="navbar">
+                <a href="index.html" class="nav-link">home</a>
+                <div class="dropdown">
+                    <a onclick="dropDownFunction()" class="nav-link active">bikes</a>
+                    <div id="dropdownMenu" class="dropdown-content">
+                        <img class="logo" src="imgs/logo.png">
+                        <a href="hardtail.html">hardtail</a>
+                        <a href="trail.html">trail</a>
+                        <a href="enduro.html">enduro</a>
+                        <a href="downhill.html">downhill</a>
+                        <a href="ebike.html">e-bike</a>
+                    </div>
+                </div>
+                <a href="about-us.html" class="nav-link">our story</a>
+                <a href="contact.html" class="nav-link">contact</a>
+            </nav>
+          </header>
+
+        <div class="bannerPage">
+          <h1>Enduro</h1>
+      </div>
+    
+    <!-- Slideshow container -->
+    <div class="slideshow-container">
+    
+        <!-- Full-width images with number and caption text -->
+        <div class="mySlides fade">
+          <img src="imgs/metaFull.png" style="width:100%">
+          <div class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Mattis vulputate enim nulla aliquet porttitor. Nam libero justo laoreet sit amet cursus. Aliquam eleifend mi in nulla posuere sollicitudin aliquam ultrices sagittis. Faucibus vitae aliquet nec ullamcorper. Neque viverra justo nec ultrices dui. Hendrerit dolor magna eget est lorem ipsum dolor sit amet. Mauris sit amet massa vitae tortor condimentum lacinia. Pharetra diam sit amet nisl suscipit adipiscing. Turpis egestas sed tempus urna et pharetra. Et tortor at risus viverra adipiscing at in tellus. Mauris vitae ultricies leo integer malesuada nunc vel risus commodo.</div>
+        </div>
+      
+        <div class="mySlides fade">
+          <img src="imgs/metaFork.png" style="width:100%">
+          <div class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Mattis vulputate enim nulla aliquet porttitor. Nam libero justo laoreet sit amet cursus. Aliquam eleifend mi in nulla posuere sollicitudin aliquam ultrices sagittis. Faucibus vitae aliquet nec ullamcorper. Neque viverra justo nec ultrices dui. Hendrerit dolor magna eget est lorem ipsum dolor sit amet. Mauris sit amet massa vitae tortor condimentum lacinia. Pharetra diam sit amet nisl suscipit adipiscing. Turpis egestas sed tempus urna et pharetra. Et tortor at risus viverra adipiscing at in tellus. Mauris vitae ultricies leo integer malesuada nunc vel risus commodo.</div>
+        </div>
+      
+        <div class="mySlides fade">
+          <img src="imgs/metaDriveTrain.png" style="width:100%">
+          <div class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Mattis vulputate enim nulla aliquet porttitor. Nam libero justo laoreet sit amet cursus. Aliquam eleifend mi in nulla posuere sollicitudin aliquam ultrices sagittis. Faucibus vitae aliquet nec ullamcorper. Neque viverra justo nec ultrices dui. Hendrerit dolor magna eget est lorem ipsum dolor sit amet. Mauris sit amet massa vitae tortor condimentum lacinia. Pharetra diam sit amet nisl suscipit adipiscing. Turpis egestas sed tempus urna et pharetra. Et tortor at risus viverra adipiscing at in tellus. Mauris vitae ultricies leo integer malesuada nunc vel risus commodo.</div>
+        </div>
+    
+        <div class="mySlides fade">
+            <img src="imgs/metaBrakes.png" style="width:100%">
+            <div class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Mattis vulputate enim nulla aliquet porttitor. Nam libero justo laoreet sit amet cursus. Aliquam eleifend mi in nulla posuere sollicitudin aliquam ultrices sagittis. Faucibus vitae aliquet nec ullamcorper. Neque viverra justo nec ultrices dui. Hendrerit dolor magna eget est lorem ipsum dolor sit amet. Mauris sit amet massa vitae tortor condimentum lacinia. Pharetra diam sit amet nisl suscipit adipiscing. Turpis egestas sed tempus urna et pharetra. Et tortor at risus viverra adipiscing at in tellus. Mauris vitae ultricies leo integer malesuada nunc vel risus commodo.</div>
+          </div>
+      
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+      </div>
+      <br>
+      
+      <div style="text-align:center">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+        <span class="dot" onclick="currentSlide(4)"></span>
+      </div>
+    
+      <footer class="footer">
+        <div class="copyright">
+            <p>Creation of SP ® 2023</p>
+        </div>
+      </footer>
+    </div>
+
+    <script>
+      let slideIndex = 1;
+  showSlides(slideIndex);
+  
+  // Next/previous controls
+  function plusSlides(n) {
+    showSlides(slideIndex += n);
+  }
+  
+  // Thumbnail image controls
+  function currentSlide(n) {
+    showSlides(slideIndex = n);
+  }
+  
+  function showSlides(n) {
+    let i;
+    let slides = document.getElementsByClassName("mySlides");
+    let dots = document.getElementsByClassName("dot");
+      if (n > slides.length) {slideIndex = 1}
+      if (n < 1) {slideIndex = slides.length}
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+      }
+      for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace("actived", "");
+      }
+      slides[slideIndex-1].style.display = "block";
+      dots[slideIndex-1].className += " actived";
+    }
+  </script>
+
 </body>
 </html>

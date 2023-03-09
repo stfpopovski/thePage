@@ -6,57 +6,44 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <title>The Page | Home</title>
+    <script>
+        window.onscroll = function() {
+          scrollFunction()
+        };
+        
+        function scrollFunction() {
+          let logo = document.getElementById("logo")
+          let header = document.getElementById("header")
+          let dropDown = document.getElementById("dropdownMenu")
+          let backToTop = document.getElementById("back-to-top-btn")
+
+          if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
+            logo.style.width = '4em';
+            logo.style.marginLeft = '1em';
+            header.style.background = '#000';
+            dropDown.style.top = '2.6em';
+            if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300){
+                backToTop.style.opacity = "1";
+            }
+
+          } else {
+            logo.style.width = '6em';
+            logo.style.marginLeft = '-1em';
+            header.style.background = '#0000009d';
+            dropDown.style.top = '4em';
+            backToTop.style.opacity = "0";
+          }
+          
+        }
+        </script>
 </head>
 <body>
     
-    <div class="content">
-        <header>
-            <img class="logo" src="imgs/logo.png">
-            <nav class="nav">
-                <a href="index.html" class="nav-link active">home</a>
-                <div class="dropdown">
-                    <a onclick="dropDownFunction()" class="nav-link">bikes</a>
-                    <div id = "dropdownMenu" class="dropdown-content">
-                        <a href="hardtail.html">hardtail</a>
-                        <a href="trail.html">trail</a>
-                        <a href="enduro.html">enduro</a>
-                        <a href="downhill.html">downhill</a>
-                        <a href="ebike.html">e-bike</a>
-                    </div>
-                </div>
-                <a href="about-us.html" class="nav-link">our story</a>
-                <a href="contact.html" class="nav-link">contact</a>
-            </nav>
-        </header>
-
-        <div class="banner">
-            <h1>Lorem ipsum dolor sit amet</h1>
-        </div>
-
-        <main class="section1">
-            <img src="imgs/bike1.jpg" class="bike1">
-            <p class="text1">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Mattis vulputate enim nulla aliquet porttitor. Nam libero justo laoreet sit amet cursus. Aliquam eleifend mi in nulla posuere sollicitudin aliquam ultrices sagittis. Faucibus vitae aliquet nec ullamcorper. Neque viverra justo nec ultrices dui. Hendrerit dolor magna eget est lorem ipsum dolor sit amet. Mauris sit amet massa vitae tortor condimentum lacinia. Pharetra diam sit amet nisl suscipit adipiscing. Turpis egestas sed tempus urna et pharetra. Et tortor at risus viverra adipiscing at in tellus. Mauris vitae ultricies leo integer malesuada nunc vel risus commodo.</p>
-        </main>
-
-        <div class="separator"></div>
-
-        <main class="section2">  
-            <img src="imgs/bike2.jpg" class="bike2">
-            <p class="text2">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Mattis vulputate enim nulla aliquet porttitor. Nam libero justo laoreet sit amet cursus. Aliquam eleifend mi in nulla posuere sollicitudin aliquam ultrices sagittis. Faucibus vitae aliquet nec ullamcorper. Neque viverra justo nec ultrices dui. Hendrerit dolor magna eget est lorem ipsum dolor sit amet. Mauris sit amet massa vitae tortor condimentum lacinia. Pharetra diam sit amet nisl suscipit adipiscing. Turpis egestas sed tempus urna et pharetra. Et tortor at risus viverra adipiscing at in tellus. Mauris vitae ultricies leo integer malesuada nunc vel risus commodo.</p>
-        </main>
-
-        <footer class="footer">
-            <div class="copyright">
-                <p>Creation of SP ® 2023</p>
-            </div>
-        </footer>
-    </div>
-
 <script>
     function dropDownFunction() {
-    document.getElementById("dropdownMenu").classList.toggle("show");
+        document.getElementById("dropdownMenu").classList.toggle("show");
     }
-
+    
     window.onclick = function(event) {
     if (!event.target.matches('.nav-link')) {
         var dropdowns = document.getElementsByClassName("dropdown-content");
@@ -70,6 +57,52 @@
         }
     }
 </script>
+
+    <div class="main-grid" id="anchor-top">
+        <header id="header">
+            <a href="index.html"><img id="logo" class="logo" loading="lazy" src="imgs/logo.png"></a>
+            <nav class="navbar">
+                <a href="index.html" class="nav-link active">home</a>
+                <div class="dropdown is-right">
+                    <a onclick="dropDownFunction()" class="nav-link">bikes</a>
+                    <div id = "dropdownMenu" class="dropdown-content">
+                        <a href="hardtail.html">hardtail</a>
+                        <a href="trail.html">trail</a>
+                        <a href="enduro.html">enduro</a>
+                        <a href="downhill.html">downhill</a>
+                        <a href="ebike.html">e-bike</a>
+                    </div>
+                </div>
+                <a href="#anchor-test" class="nav-link">our story</a>
+                <a href="contact.html" class="nav-link">contact</a>
+            </nav>
+        </header>
+        <div class="banner">
+            <h1>Lorem ipsum dolor sit amet</h1>
+        </div>
+
+        <main id="anchor-test" class="section1">
+            <img loading="lazy" src="imgs/bike1.jpg" class="bike1">
+            <p class="text1">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Mattis vulputate enim nulla aliquet porttitor. Nam libero justo laoreet sit amet cursus. Aliquam eleifend mi in nulla posuere sollicitudin aliquam ultrices sagittis. Faucibus vitae aliquet nec ullamcorper. Neque viverra justo nec ultrices dui. Hendrerit dolor magna eget est lorem ipsum dolor sit amet. Mauris sit amet massa vitae tortor condimentum lacinia. Pharetra diam sit amet nisl suscipit adipiscing. Turpis egestas sed tempus urna et pharetra. Et tortor at risus viverra adipiscing at in tellus. Mauris vitae ultricies leo integer malesuada nunc vel risus commodo.</p>
+        </main>
+
+        <div class="separator"></div>
+
+        <main class="section2">  
+            <img loading="lazy" src="imgs/bike2.jpg" class="bike2">
+            <p class="text2">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Mattis vulputate enim nulla aliquet porttitor. Nam libero justo laoreet sit amet cursus. Aliquam eleifend mi in nulla posuere sollicitudin aliquam ultrices sagittis. Faucibus vitae aliquet nec ullamcorper. Neque viverra justo nec ultrices dui. Hendrerit dolor magna eget est lorem ipsum dolor sit amet. Mauris sit amet massa vitae tortor condimentum lacinia. Pharetra diam sit amet nisl suscipit adipiscing. Turpis egestas sed tempus urna et pharetra. Et tortor at risus viverra adipiscing at in tellus. Mauris vitae ultricies leo integer malesuada nunc vel risus commodo.</p>
+        </main>
+
+        <div class="back-to-top">
+            <a href="#anchor-top"><img id="back-to-top-btn" src="imgs/backtotop.webp"></a>
+        </div>
+
+        <footer class="footer">
+            <div class="copyright">
+                <p>Creation of SP ® 2023</p>
+            </div>
+        </footer>
+    </div>
 
 </body>
 </html>

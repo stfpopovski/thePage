@@ -4,19 +4,46 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/94ef29ef10.js" crossorigin="anonymous"></script>
+    <script>
+        window.onscroll = function() {
+          scrollFunction()
+        };
+        
+        function scrollFunction() {
+          let logo = document.getElementById("logo")
+          let header = document.getElementById("header")
+          let dropDown = document.getElementById("dropdownMenu")
+
+          if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
+            logo.style.width = '4em';
+            logo.style.marginLeft = '1em';
+            header.style.background = '#000';
+            dropDown.style.top = '2.6em';
+
+          } else {
+            logo.style.width = '6em';
+            logo.style.marginLeft = '-1em';
+            header.style.background = '#0000009d';
+            dropDown.style.top = '4em';
+          }
+          
+        }
+        </script>
     <link rel="stylesheet" href="style.css">
     <title>The Page | Contact</title>
 </head>
 <body>
     
-    <div class="main-grid">
-        <header>
-            <img class="logo" src="imgs/logo.png">
-            <nav class="nav">
+    <div class="contact-container">
+        <header id="header">
+            <a href="index.html"><img id="logo" class="logo" loading="lazy" src="imgs/logo.png"></a>
+            <nav class="navbar">
                 <a href="index.html" class="nav-link">home</a>
                 <div class="dropdown">
                     <a onclick="dropDownFunction()" class="nav-link">bikes</a>
-                    <div id="dropdownMenu" class="dropdown-content">
+                    <div id = "dropdownMenu" class="dropdown-content">
+                        <img class="logo" src="imgs/logo.png">
                         <a href="hardtail.html">hardtail</a>
                         <a href="trail.html">trail</a>
                         <a href="enduro.html">enduro</a>
@@ -28,6 +55,57 @@
                 <a href="contact.html" class="nav-link active">contact</a>
             </nav>
         </header>
+
+        <main class="contact">
+
+            <h1>Message Us!</h1>
+
+
+            <div class="icons">
+                <a href=""><div class="phone">
+                    <i class="fa-solid fa-phone fa-2xl"></i>
+                    <p>+359882722939</p>
+                </div></a>
+                <a href=""><div class="location">
+                    <i class="fa-solid fa-location-dot fa-2xl"></i>
+                    <p>Pamporovo</p>
+                </div></a>
+                <a href=""><div class="email">
+                    <i class="fa-solid fa-envelope fa-2xl"></i>
+                    <p>admin@admin.com</p>
+                </div></a>
+            </div>
+
+            <div class="form-container">
+                <form action="">
+                    <div class="form-layout">
+                    <div class="col1">
+                        <label class="required" for="firstName">First name:</label>
+                        <input type="text" id="fname" name="fname" required>
+                        <label for="lastName">Last name:</label>
+                        <input type="text" id="lname" name="lname">
+                        <label class="required" for="email">Email:</label>
+                        <input type="text" id="email" name="email" required>
+                        <label for="phone">Phone:</label>
+                        <input type="text" id="phone" name="phone">
+                    </div>
+                    <div class="col2">
+                        <label class="required" for="message">Message:</label>
+                        <textarea class="message" required></textarea><br>
+                    </div>
+                    </div>
+                    <input type="submit" class="submit" value="Submit">
+                  </form> 
+            </div>
+
+        </main>
+
+        <footer class="footer">
+            <div class="copyright">
+                <p>Creation of SP ® 2023</p>
+            </div>
+        </footer>
+    </div> 
 
 <script>
     function dropDownFunction() {
@@ -47,6 +125,6 @@
         }
     }
 </script>
-        
+
 </body>
 </html>
