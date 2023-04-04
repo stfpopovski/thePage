@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <title>The Page | Enduro</title>
+    <!--Header animation and back to top button script-->
     <script>
       window.onscroll = function() {
         scrollFunction()
@@ -15,25 +16,31 @@
         let logo = document.getElementById("logo")
         let header = document.getElementById("header")
         let dropDown = document.getElementById("dropdownMenu")
+        let backToTop = document.getElementById("back-to-top-btn")
 
         if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
           logo.style.width = '4em';
           logo.style.marginLeft = '1em';
           header.style.background = '#000';
           dropDown.style.top = '2.6em';
+          if (document.body.scrollTop > 400 || document.documentElement.scrollTop > 400){
+              backToTop.style.opacity = "1";
+          }
 
         } else {
           logo.style.width = '6em';
           logo.style.marginLeft = '-1em';
           header.style.background = '#0000009d';
           dropDown.style.top = '4em';
+          backToTop.style.opacity = "0";
         }
         
       }
-      </script>
+    </script>
+    
 </head>
 <body>
-
+  <!--Dropdown menu script-->
 <script>
   function dropDownFunction() {
     document.getElementById("dropdownMenu").classList.toggle("show");
@@ -78,42 +85,40 @@
           <h1>Enduro</h1>
       </div>
     
-    <!-- Slideshow container -->
+      <!-- Slideshow container -->
     <div class="slideshow-container">
     
-        <!-- Full-width images with number and caption text -->
-        <div class="mySlides fade">
-          <img src="imgs/metaFull.png" style="width:100%">
-          <div class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Mattis vulputate enim nulla aliquet porttitor. Nam libero justo laoreet sit amet cursus. Aliquam eleifend mi in nulla posuere sollicitudin aliquam ultrices sagittis. Faucibus vitae aliquet nec ullamcorper. Neque viverra justo nec ultrices dui. Hendrerit dolor magna eget est lorem ipsum dolor sit amet. Mauris sit amet massa vitae tortor condimentum lacinia. Pharetra diam sit amet nisl suscipit adipiscing. Turpis egestas sed tempus urna et pharetra. Et tortor at risus viverra adipiscing at in tellus. Mauris vitae ultricies leo integer malesuada nunc vel risus commodo.</div>
-        </div>
-      
-        <div class="mySlides fade">
-          <img src="imgs/metaFork.png" style="width:100%">
-          <div class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Mattis vulputate enim nulla aliquet porttitor. Nam libero justo laoreet sit amet cursus. Aliquam eleifend mi in nulla posuere sollicitudin aliquam ultrices sagittis. Faucibus vitae aliquet nec ullamcorper. Neque viverra justo nec ultrices dui. Hendrerit dolor magna eget est lorem ipsum dolor sit amet. Mauris sit amet massa vitae tortor condimentum lacinia. Pharetra diam sit amet nisl suscipit adipiscing. Turpis egestas sed tempus urna et pharetra. Et tortor at risus viverra adipiscing at in tellus. Mauris vitae ultricies leo integer malesuada nunc vel risus commodo.</div>
-        </div>
-      
-        <div class="mySlides fade">
-          <img src="imgs/metaDriveTrain.png" style="width:100%">
-          <div class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Mattis vulputate enim nulla aliquet porttitor. Nam libero justo laoreet sit amet cursus. Aliquam eleifend mi in nulla posuere sollicitudin aliquam ultrices sagittis. Faucibus vitae aliquet nec ullamcorper. Neque viverra justo nec ultrices dui. Hendrerit dolor magna eget est lorem ipsum dolor sit amet. Mauris sit amet massa vitae tortor condimentum lacinia. Pharetra diam sit amet nisl suscipit adipiscing. Turpis egestas sed tempus urna et pharetra. Et tortor at risus viverra adipiscing at in tellus. Mauris vitae ultricies leo integer malesuada nunc vel risus commodo.</div>
-        </div>
-    
-        <div class="mySlides fade">
-            <img src="imgs/metaBrakes.png" style="width:100%">
-            <div class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Mattis vulputate enim nulla aliquet porttitor. Nam libero justo laoreet sit amet cursus. Aliquam eleifend mi in nulla posuere sollicitudin aliquam ultrices sagittis. Faucibus vitae aliquet nec ullamcorper. Neque viverra justo nec ultrices dui. Hendrerit dolor magna eget est lorem ipsum dolor sit amet. Mauris sit amet massa vitae tortor condimentum lacinia. Pharetra diam sit amet nisl suscipit adipiscing. Turpis egestas sed tempus urna et pharetra. Et tortor at risus viverra adipiscing at in tellus. Mauris vitae ultricies leo integer malesuada nunc vel risus commodo.</div>
-          </div>
-      
-        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-        <a class="next" onclick="plusSlides(1)">&#10095;</a>
-      </div>
-      <br>
-      
-      <div style="text-align:center">
-        <span class="dot" onclick="currentSlide(1)"></span>
-        <span class="dot" onclick="currentSlide(2)"></span>
-        <span class="dot" onclick="currentSlide(3)"></span>
-        <span class="dot" onclick="currentSlide(4)"></span>
+      <!-- Full-width images with number and caption text -->
+      <div class="mySlides fade">
+        <img src="imgs/Capra_27_AL_Core1_BlackMagic_Front.png" style="width:100%">
+        <div class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Mattis vulputate enim nulla aliquet porttitor. Nam libero justo laoreet sit amet cursus. Aliquam eleifend mi in nulla posuere sollicitudin aliquam ultrices sagittis. Faucibus vitae aliquet nec ullamcorper. Neque viverra justo nec ultrices dui. Hendrerit dolor magna eget est lorem ipsum dolor sit amet. Mauris sit amet massa vitae tortor condimentum lacinia. Pharetra diam sit amet nisl suscipit adipiscing. Turpis egestas sed tempus urna et pharetra. Et tortor at risus viverra adipiscing at in tellus. Mauris vitae ultricies leo integer malesuada nunc vel risus commodo.</div>
       </div>
     
+      <div class="mySlides fade">
+        <img src="imgs/Capra_27_AL_Core1_BlackMagic_Side.png" style="width:100%">
+        <div class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Mattis vulputate enim nulla aliquet porttitor. Nam libero justo laoreet sit amet cursus. Aliquam eleifend mi in nulla posuere sollicitudin aliquam ultrices sagittis. Faucibus vitae aliquet nec ullamcorper. Neque viverra justo nec ultrices dui. Hendrerit dolor magna eget est lorem ipsum dolor sit amet. Mauris sit amet massa vitae tortor condimentum lacinia. Pharetra diam sit amet nisl suscipit adipiscing. Turpis egestas sed tempus urna et pharetra. Et tortor at risus viverra adipiscing at in tellus. Mauris vitae ultricies leo integer malesuada nunc vel risus commodo.</div>
+      </div>
+    
+      <div class="mySlides fade">
+        <img src="imgs/Capra_27_AL_Core1_BlackMagic_Rear.png" style="width:100%">
+        <div class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Mattis vulputate enim nulla aliquet porttitor. Nam libero justo laoreet sit amet cursus. Aliquam eleifend mi in nulla posuere sollicitudin aliquam ultrices sagittis. Faucibus vitae aliquet nec ullamcorper. Neque viverra justo nec ultrices dui. Hendrerit dolor magna eget est lorem ipsum dolor sit amet. Mauris sit amet massa vitae tortor condimentum lacinia. Pharetra diam sit amet nisl suscipit adipiscing. Turpis egestas sed tempus urna et pharetra. Et tortor at risus viverra adipiscing at in tellus. Mauris vitae ultricies leo integer malesuada nunc vel risus commodo.</div>
+      </div>
+
+      <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+      <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    </div>
+    <br>
+    
+    <div style="text-align:center">
+      <span class="dot" onclick="currentSlide(1)"></span>
+      <span class="dot" onclick="currentSlide(2)"></span>
+      <span class="dot" onclick="currentSlide(3)"></span>
+    </div>
+
+      <div class="back-to-top">
+        <a href="#main-grid"><img id="back-to-top-btn" src="imgs/backtotop.webp"></a>
+      </div>
+
       <footer class="footer">
         <div class="copyright">
             <p>Creation of SP ® 2023</p>
@@ -121,36 +126,35 @@
       </footer>
     </div>
 
-    <script>
-      let slideIndex = 1;
-  showSlides(slideIndex);
-  
-  // Next/previous controls
-  function plusSlides(n) {
-    showSlides(slideIndex += n);
-  }
-  
-  // Thumbnail image controls
-  function currentSlide(n) {
-    showSlides(slideIndex = n);
-  }
-  
-  function showSlides(n) {
-    let i;
-    let slides = document.getElementsByClassName("mySlides");
-    let dots = document.getElementsByClassName("dot");
-      if (n > slides.length) {slideIndex = 1}
+  <!--Slideshow Script-->
+  <script>
+    let slideIndex = 1;
+    showSlides(slideIndex);
+    
+    function plusSlides(n) {
+      showSlides(slideIndex += n);
+    }
+    
+    function currentSlide(n) {
+      showSlides(slideIndex = n);
+    }
+    
+    function showSlides(n) {
+      let i;
+      let slides = document.getElementsByClassName("mySlides");
+      let dots = document.getElementsByClassName("dot");
+      if (n > slides.length) {slideIndex = 1}    
       if (n < 1) {slideIndex = slides.length}
       for (i = 0; i < slides.length; i++) {
-        slides[i].style.display = "none";
+        slides[i].style.display = "none";  
       }
       for (i = 0; i < dots.length; i++) {
-        dots[i].className = dots[i].className.replace("actived", "");
+        dots[i].className = dots[i].className.replace(" actived", "");
       }
-      slides[slideIndex-1].style.display = "block";
+      slides[slideIndex-1].style.display = "block";  
       dots[slideIndex-1].className += " actived";
     }
-  </script>
+    </script>
 
 </body>
 </html>

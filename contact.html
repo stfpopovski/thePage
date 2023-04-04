@@ -14,18 +14,21 @@
           let logo = document.getElementById("logo")
           let header = document.getElementById("header")
           let dropDown = document.getElementById("dropdownMenu")
+          let backToTop = document.getElementById("back-to-top-btn")
 
           if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
             logo.style.width = '4em';
             logo.style.marginLeft = '1em';
             header.style.background = '#000';
             dropDown.style.top = '2.6em';
+            backToTop.style.opacity = "1";
 
           } else {
             logo.style.width = '6em';
             logo.style.marginLeft = '-1em';
             header.style.background = '#0000009d';
             dropDown.style.top = '4em';
+            backToTop.style.opacity = "0";
           }
           
         }
@@ -33,9 +36,27 @@
     <link rel="stylesheet" href="style.css">
     <title>The Page | Contact</title>
 </head>
-<body>
+<body>    
+    <script>
+        function dropDownFunction() {
+        document.getElementById("dropdownMenu").classList.toggle("show");
+        }
     
-    <div class="contact-container">
+        window.onclick = function(event) {
+        if (!event.target.matches('.nav-link')) {
+            var dropdowns = document.getElementsByClassName("dropdown-content");
+            var i;
+                for (i = 0; i < dropdowns.length; i++) {
+                    var openDropdown = dropdowns[i];
+                    if (openDropdown.classList.contains('show')) {
+                    openDropdown.classList.remove('show');
+                    }
+                }
+            }
+        }
+    </script>
+
+    <div class="contact-container" id="anchor-top">
         <header id="header">
             <a href="index.html"><img id="logo" class="logo" loading="lazy" src="imgs/logo.png"></a>
             <nav class="navbar">
@@ -100,31 +121,16 @@
 
         </main>
 
+        <div class="back-to-top">
+            <a href="#anchor-top"><img id="back-to-top-btn" src="imgs/backtotop.webp"></a>
+        </div>
+
         <footer class="footer">
             <div class="copyright">
                 <p>Creation of SP ® 2023</p>
             </div>
         </footer>
     </div> 
-
-<script>
-    function dropDownFunction() {
-    document.getElementById("dropdownMenu").classList.toggle("show");
-    }
-
-    window.onclick = function(event) {
-    if (!event.target.matches('.nav-link')) {
-        var dropdowns = document.getElementsByClassName("dropdown-content");
-        var i;
-            for (i = 0; i < dropdowns.length; i++) {
-                var openDropdown = dropdowns[i];
-                if (openDropdown.classList.contains('show')) {
-                openDropdown.classList.remove('show');
-                }
-            }
-        }
-    }
-</script>
 
 </body>
 </html>
