@@ -28,8 +28,8 @@ body, html {
   }
 
 .logo {
-  width: 6em;
-  margin-left: -1em;
+  width: 4em;
+  margin-left: 0.5em;
   transition: 0.2s;
 }
 
@@ -93,7 +93,7 @@ a > img:only-child {
   color: var(--clr-text);
   opacity: 0.8;
   }
-  
+
 .dropdown-content {
   top: 4em;
   bottom: 0;
