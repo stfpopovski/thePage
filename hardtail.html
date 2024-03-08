@@ -5,63 +5,44 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>The Page | Hardtail</title>
+    <title>The Page | Enduro</title>
+    <!--Header animation and back to top button script-->
     <script>
-        window.onscroll = function() {
-          scrollFunction()
-        };
-        
-        function scrollFunction() {
-          let logo = document.getElementById("logo")
-          let header = document.getElementById("header")
-          let dropDown = document.getElementById("dropdownMenu")
-          let backToTop = document.getElementById("back-to-top-btn")
+      window.onscroll = function() {
+        scrollFunction()
+      };
+      
+      function scrollFunction() {
+        let logo = document.getElementById("logo")
+        let header = document.getElementById("header")
+        let dropDown = document.getElementById("dropdownMenu")
+        let backToTop = document.getElementById("back-to-top-btn")
 
-          if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
-            logo.style.width = '3em';
-            logo.style.marginLeft = '0.5em';
-            header.style.background = '#000';
-            dropDown.style.top = '2.6em';
-            if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300){
-                backToTop.style.opacity = "1";
-            }
-
-          } else {
-            logo.style.width = '4em';
-            logo.style.marginLeft = '0.5em';
-            header.style.background = '#0000009d';
-            dropDown.style.top = '4em';
-            backToTop.style.opacity = "0";
+        if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
+          logo.style.width = '3em';
+          logo.style.marginLeft = '0.5em';
+          header.style.background = '#000';
+          dropDown.style.top = '2.6em';
+          if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300){
+              backToTop.style.opacity = "1";
           }
-          
+
+        } else {
+          logo.style.width = '4em';
+          logo.style.marginLeft = '0.5em';
+          header.style.background = '#0000009d';
+          dropDown.style.top = '4em';
+          backToTop.style.opacity = "0";
         }
-        </script>
+        
+      }
+      </script>
+    
 </head>
 <body>
-    
-    <div class="main-grid">
-        <header>
-            <a href="index.html"><img class="logo" src="imgs/logo.png"></a>
-            <nav class="nav">
-                <a href="index.html" class="nav-link">home</a>
-                <div class="dropdown">
-                    <a onclick="dropDownFunction()" class="nav-link active">bikes</a>
-                    <div id="dropdownMenu" class="dropdown-content">
-                        <img class="logo" src="imgs/logo.png">
-                        <a href="hardtail.html">hardtail</a>
-                        <a href="trail.html">trail</a>
-                        <a href="enduro.html">enduro</a>
-                        <a href="downhill.html">downhill</a>
-                        <a href="ebike.html">e-bike</a>
-                    </div>
-                </div>
-                <a href="about-us.html" class="nav-link">our story</a>
-                <a href="contact.html" class="nav-link">contact</a>
-            </nav>
-        </header>
-
+  <!--Dropdown menu script-->
 <script>
-    function dropDownFunction() {
+  function dropDownFunction() {
     document.getElementById("dropdownMenu").classList.toggle("show");
     }
 
@@ -78,6 +59,102 @@
         }
     }
 </script>
-        
+
+    <div id ="main-grid" class="main-grid">
+      <header id="header">
+        <a href="index.html"><img id="logo" class="logo" src="imgs/logo.png"></a>
+            <nav class="navbar">
+                <a href="index.html" class="nav-link">home</a>
+                <div class="dropdown">
+                    <a onclick="dropDownFunction()" class="nav-link active">bikes</a>
+                    <div id="dropdownMenu" class="dropdown-content">
+                        <img class="logo" src="imgs/logo.png">
+                        <a href="hardtail.html">hardtail</a>
+                        <a href="trail.html">trail</a>
+                        <a href="enduro.html">enduro</a>
+                        <a href="downhill.html">downhill</a>
+                        <a href="ebike.html">e-bike</a>
+                    </div>
+                </div>
+                <a href="about-us.html" class="nav-link">our story</a>
+                <a href="contact.html" class="nav-link">contact</a>
+            </nav>
+          </header>
+
+        <div class="bannerPage">
+          <h1>Enduro</h1>
+      </div>
+    
+      <!-- Slideshow container -->
+    <div class="slideshow-container">
+    
+      <!-- Full-width images with number and caption text -->
+      <div class="mySlides fade">
+        <img src="imgs/capra_front.png" style="width:100%">
+        <div class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Mattis vulputate enim nulla aliquet porttitor. Nam libero justo laoreet sit amet cursus. Aliquam eleifend mi in nulla posuere sollicitudin aliquam ultrices sagittis. Faucibus vitae aliquet nec ullamcorper. Neque viverra justo nec ultrices dui. Hendrerit dolor magna eget est lorem ipsum dolor sit amet. Mauris sit amet massa vitae tortor condimentum lacinia. Pharetra diam sit amet nisl suscipit adipiscing. Turpis egestas sed tempus urna et pharetra. Et tortor at risus viverra adipiscing at in tellus. Mauris vitae ultricies leo integer malesuada nunc vel risus commodo.</div>
+      </div>
+    
+      <div class="mySlides fade">
+        <img src="imgs/capra_side.png" style="width:100%">
+        <div class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Mattis vulputate enim nulla aliquet porttitor. Nam libero justo laoreet sit amet cursus. Aliquam eleifend mi in nulla posuere sollicitudin aliquam ultrices sagittis. Faucibus vitae aliquet nec ullamcorper. Neque viverra justo nec ultrices dui. Hendrerit dolor magna eget est lorem ipsum dolor sit amet. Mauris sit amet massa vitae tortor condimentum lacinia. Pharetra diam sit amet nisl suscipit adipiscing. Turpis egestas sed tempus urna et pharetra. Et tortor at risus viverra adipiscing at in tellus. Mauris vitae ultricies leo integer malesuada nunc vel risus commodo.</div>
+      </div>
+    
+      <div class="mySlides fade">
+        <img src="imgs/capra_back.png" style="width:100%">
+        <div class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Mattis vulputate enim nulla aliquet porttitor. Nam libero justo laoreet sit amet cursus. Aliquam eleifend mi in nulla posuere sollicitudin aliquam ultrices sagittis. Faucibus vitae aliquet nec ullamcorper. Neque viverra justo nec ultrices dui. Hendrerit dolor magna eget est lorem ipsum dolor sit amet. Mauris sit amet massa vitae tortor condimentum lacinia. Pharetra diam sit amet nisl suscipit adipiscing. Turpis egestas sed tempus urna et pharetra. Et tortor at risus viverra adipiscing at in tellus. Mauris vitae ultricies leo integer malesuada nunc vel risus commodo.</div>
+      </div>
+
+      <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+      <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    </div>
+    <br>
+    
+    <div style="text-align:center">
+      <span class="dot" onclick="currentSlide(1)"></span>
+      <span class="dot" onclick="currentSlide(2)"></span>
+      <span class="dot" onclick="currentSlide(3)"></span>
+    </div>
+
+      <div class="back-to-top">
+        <a href="#main-grid"><img id="back-to-top-btn" src="imgs/backtotop.webp"></a>
+      </div>
+
+      <footer class="footer">
+        <div class="copyright">
+            <p>Creation of SP ® 2023</p>
+        </div>
+      </footer>
+    </div>
+
+  <!--Slideshow Script-->
+  <script>
+    let slideIndex = 1;
+    showSlides(slideIndex);
+    
+    function plusSlides(n) {
+      showSlides(slideIndex += n);
+    }
+    
+    function currentSlide(n) {
+      showSlides(slideIndex = n);
+    }
+    
+    function showSlides(n) {
+      let i;
+      let slides = document.getElementsByClassName("mySlides");
+      let dots = document.getElementsByClassName("dot");
+      if (n > slides.length) {slideIndex = 1}    
+      if (n < 1) {slideIndex = slides.length}
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";  
+      }
+      for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" actived", "");
+      }
+      slides[slideIndex-1].style.display = "block";  
+      dots[slideIndex-1].className += " actived";
+    }
+    </script>
+
 </body>
 </html>
